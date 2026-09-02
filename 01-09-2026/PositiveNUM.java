@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class PositiveNUM
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Any Number You Want To Check :");
+        int num = sc.nextInt();
+
+        if(num > 0)
+        {
+            System.out.println("Numbers is Positive");
+        }
+        else
+        {
+            System.out.println("Number is Negative");
+        }
+        sc.close();
+    }
+    
+}
