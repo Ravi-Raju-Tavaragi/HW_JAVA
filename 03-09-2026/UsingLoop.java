@@ -48,9 +48,10 @@ public class UsingLoop
         }
 
         System.out.println("Sum of N numbers");
-        for(int num7 = 0; num7 <= 10; num7++)
+        int result4 = 0;
+        for(int num7 = 1; num7 <= 10; num7++)
         {
-            int result4 = num7 + num7;
+            result4 = result4 + num7;
             System.out.println("Sum of Numbers :"+result4);
         }
 
