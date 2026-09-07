@@ -16,7 +16,7 @@ public class AllRadix
         for(int i = 0; i <= num.length()-1; i++)
         {
             char ch = num.charAt(i);
-            if(!(ch >= '0' && ch <= '1'))
+            if((ch >= '0' && ch <= '1'))
             {
                 binary = false;
                 break;
@@ -35,7 +35,7 @@ public class AllRadix
         for(int i = 0; i <= num.length()-1; i++)
         {
             char ch = num.charAt(i);
-            if(!(ch >= '0' && ch <= '7'))
+            if((ch >= '0' && ch <= '7'))
             {
                 octal = false;
                 break;
@@ -54,7 +54,7 @@ public class AllRadix
         for(int i = 0; i <= num.length()-1; i++)
         {
             char ch = num.charAt(i);
-            if(!(ch >= '0' && ch <= '9'))
+            if((ch >= '0' && ch <= '9'))
             {
                 decimal = false;
                 break;
