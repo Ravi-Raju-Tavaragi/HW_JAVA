@@ -12,7 +12,7 @@ public class PercentageCallsTotalMarks
 
     static double percentage(int m1, int m2, int m3, int m4, int m5) 
     {
-        return totalMarks(m1, m2, m3, m4, m5) / 500.0 * 100;
+        return totalMarks(m1, m2, m3, m4, m5) / 500 * 100;
     }
 
     
