@@ -7,10 +7,12 @@ public class StudentResultSystem
     static int totalMarks(int[] marks) 
     {
         int total = 0;
-        for (int m : marks) 
+
+        for (int i = 0; i < marks.length; i++) 
         {
-            total += m;
+            total = total + marks[i];
         }
+
         return total;
     }
     
@@ -23,11 +25,16 @@ public class StudentResultSystem
     
     static char grade(double percent) 
     {
-        if (percent >= 90) return 'A';
-        else if (percent >= 75) return 'B';
-        else if (percent >= 60) return 'C';
-        else if (percent >= 35) return 'D';
-        else return 'F';
+        if (percent >= 90) 
+            return 'A';
+        else if (percent >= 75) 
+            return 'B';
+        else if (percent >= 60) 
+            return 'C';
+        else if (percent >= 35) 
+            return 'D';
+        else 
+            return 'F';
     }
     
     
@@ -50,8 +57,9 @@ public class StudentResultSystem
 
         System.out.print("Enter number of subjects: ");
         int n = sc.nextInt();
-        int[] marks = new int[n];
+        
 
+        int[] marks = new int[n];
         System.out.println("Enter marks (out of 100 each):");
 
         for (int i = 0; i < n; i++) 
@@ -66,7 +74,7 @@ public class StudentResultSystem
         char grd = grade(percent);
 
         displayResultCard(name, total, percent, grd);
-        
+
         sc.close();
     }
     
