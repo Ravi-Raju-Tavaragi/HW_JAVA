@@ -50,12 +50,29 @@ public class SinglyLinkedList
         head = insertAtEnd(500, head);
         printList(head);
 
-
-
         System.out.println("\n Insert at End after inserting many node");   
         head = insertAtEnd(600, head);
         printList(head);
 
+    }
+
+
+    public static void testInsertAtMid()
+    {
+        printList(null);
+
+        System.out.println("\n Insert at mid single node");
+        Node head = null;
+        head = insertAtEnd(100, head);
+        printList(head);
+        
+        System.out.println("\n Insert at mid multiple node");
+        head = insertAtEnd(200, head);
+        head = insertAtEnd(300, head);
+        printList(head);
+
+        head = insertAtEnd(600, head);
+        printList(head);
     }
 
 
@@ -102,9 +119,10 @@ public class SinglyLinkedList
     else
     {
         Node curentLastNode = head;
+
         while (curentLastNode.next != null) 
         {
-        curentLastNode = curentLastNode.next;     
+            curentLastNode = curentLastNode.next;     
         }
 
         curentLastNode.next = lastNode;
@@ -113,13 +131,42 @@ public class SinglyLinkedList
     }
     
    }
+
+   public static Node insertAtMidle(int value, Node head)
+   {
+    Node midleNode = new Node();
+    midleNode.data = value;
+    midleNode.next = null;
+
+    if(head == null)
+    {
+        return midleNode;
+    }
+
+    else
+    {
+        Node curentmidNode = head;
+
+        while (curentmidNode.data != 200) 
+        {
+            curentmidNode = curentmidNode.next;     
+        }
+
+        curentmidNode.next = midleNode;
+
+        return head;
+    }
+
+
+   }
      
 
 
     public static void main(String[] args) 
     {
-        testInserAtStart();
-        testInsertAtEnd();
+       // testInserAtStart();
+        //testInsertAtEnd();
+        testInsertAtMid();
     }
     
 }
