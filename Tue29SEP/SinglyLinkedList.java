@@ -57,21 +57,22 @@ public class SinglyLinkedList
     }
 
 
-    public static void testInsertAtMid()
+    public static void testInsertAfterKey()
     {
         printList(null);
 
-        System.out.println("\n Insert at mid single node");
+        System.out.println("\n Insert after head node");
         Node head = null;
-        head = insertAtEnd(100, head);
+        insertAfterKey(head, 100, 20);
+        printList(head);
+
+        System.out.println("\n Insert at start multiple node");
+        head = insertAtStart(200, head);
+        head = insertAtStart(300, head);
         printList(head);
         
         System.out.println("\n Insert at mid multiple node");
-        head = insertAtEnd(200, head);
-        head = insertAtEnd(300, head);
-        printList(head);
-
-        head = insertAtEnd(600, head);
+        insertAfterKey(head, 200, 20);
         printList(head);
     }
 
@@ -132,31 +133,37 @@ public class SinglyLinkedList
     
    }
 
-   public static Node insertAtMidle(int value, Node head)
+   public static void insertAfterKey(Node head, int key, int value)
    {
-    Node midleNode = new Node();
-    midleNode.data = value;
-    midleNode.next = null;
-
+    Node newNode = new Node();
+    newNode.data = value;
+    newNode.next = null;
     if(head == null)
     {
-        return midleNode;
+        return ;
     }
 
+    if(head.data == key)
+    {
+        head.next = newNode;
+        return ;
+    }
+
+    Node keyNode = head;
+    while(keyNode != null && keyNode.data != key)
+    {
+        keyNode = keyNode.next;
+    }
+
+    if(keyNode == null)
+    {
+        return ;
+    }
     else
     {
-        Node curentmidNode = head;
-
-        while (curentmidNode.data != 200) 
-        {
-            curentmidNode = curentmidNode.next;     
-        }
-
-        curentmidNode.next = midleNode;
-
-        return head;
+        newNode.next = keyNode.next;
+        keyNode.next = newNode;
     }
-
 
    }
      
@@ -164,9 +171,9 @@ public class SinglyLinkedList
 
     public static void main(String[] args) 
     {
-       // testInserAtStart();
+       testInserAtStart();
         //testInsertAtEnd();
-        testInsertAtMid();
+        testInsertAfterKey();
     }
     
 }
