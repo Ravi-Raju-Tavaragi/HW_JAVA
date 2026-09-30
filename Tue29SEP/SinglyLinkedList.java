@@ -99,15 +99,19 @@ public class SinglyLinkedList
     }
 
     //if there is one or more node and take one temporvary Node to traval throw node untill our node stop behind null
-    Node curentLastNode = head;
-    while (curentLastNode.next != null) 
+    else
     {
+        Node curentLastNode = head;
+        while (curentLastNode.next != null) 
+        {
         curentLastNode = curentLastNode.next;     
+        }
+
+        curentLastNode.next = lastNode;
+
+        return head;
     }
-
-    curentLastNode.next = lastNode;
-
-    return head;
+    
    }
      
 
