@@ -115,7 +115,7 @@ public class SinglyLinkedList
     public static void main(String[] args) 
     {
         testInserAtStart();
-        //testInsertAtEnd();
+        testInsertAtEnd();
     }
     
 }
