@@ -17,6 +17,49 @@ public class SinglyLinkedList
 
 
 
+    public static void testInserAtStart()
+    {
+        printList(null);
+
+        System.out.println("\n Insert at start single node");
+        Node head = null;
+        //Function invocation
+        head = insertAtStart(100, head);
+        printList(head);
+        
+        System.out.println("\n Insert at start multiple node");
+        head = insertAtStart(200, head);
+        head = insertAtStart(300, head);
+        printList(head);
+
+    }
+
+    public static void testInsertAtEnd()
+    {
+        printList(null);
+
+        System.out.println("\n Insert at End single node");
+        Node head = null;
+        head = insertAtEnd(100, head);
+        printList(head);
+        
+        System.out.println("\n Insert at End multiple node");
+        head = insertAtEnd(200, head);
+        head = insertAtEnd(300, head);
+        head = insertAtEnd(400, head);
+        head = insertAtEnd(500, head);
+        printList(head);
+
+
+
+        System.out.println("\n Insert at End after inserting many node");   
+        head = insertAtEnd(600, head);
+        printList(head);
+
+    }
+
+
+
 
     public static Node insertAtStart(int value, Node currenthead)
     {
@@ -42,87 +85,37 @@ public class SinglyLinkedList
     }
 
 
-    public static Node insertAtEnd(int value, Node currenthead)
+   public static Node insertAtEnd(int value, Node head)
+   {
+    //create one new Node Name it as lastNode
+    Node lastNode = new Node();
+    lastNode.data = value;
+    lastNode.next = null;
+
+    //if heap is empty or there is no node
+    if(head == null)
     {
-        Node lastNode = new Node();
-        lastNode.data = value;
-        lastNode.next = null;
-
-        if(currenthead == null)
-        {
-            return lastNode;
-        }
-
-        else
-        {
-
-        Node temp = currenthead;
-
-        while(temp.next != null)
-        {
-            temp = temp.next;
-        }
-
-        temp.next = lastNode;
-        
-
-        return currenthead;
-        }
-
+        return lastNode;
     }
 
-
-    static Node insertAtMidle(int value, Node currenthead)
+    //if there is one or more node and take one temporvary Node to traval throw node untill our node stop behind null
+    Node curentLastNode = head;
+    while (curentLastNode.next != null) 
     {
-        Node midNode = new Node();
-        midNode.data = value;
-        midNode.next = null;
-
-        Node temp = currenthead;
-        midNode.next = temp.next;
-        temp.next = midNode;
-
-        while (temp != null) 
-        {
-            if(temp.data == 100)
-            {
-                break;
-                
-            }
-        }
-        return currenthead;
-
-
+        curentLastNode = curentLastNode.next;     
     }
 
+    curentLastNode.next = lastNode;
+
+    return head;
+   }
      
 
 
     public static void main(String[] args) 
     {
-        printList(null);
-
-        System.out.println("\n Insert at start single node");
-        Node head = null;
-        //Function invocation
-        head = insertAtStart(100, head);
-        printList(head);
-        
-       System.out.println("\n Insert at start multiple node");
-        head = insertAtStart(200, head);
-        head = insertAtStart(300, head);
-        printList(head);
-        
-        System.out.println("\n Insert at End node");
-       
-        head = insertAtEnd(300, head);
-        printList(head);
-
-        System.out.println("\n Insert at Mid node");
-        head = insertAtMidle(111, head);
-        printList(head);
-
-
+        testInserAtStart();
+        //testInsertAtEnd();
     }
     
 }
