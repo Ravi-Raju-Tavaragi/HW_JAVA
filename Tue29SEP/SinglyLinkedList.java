@@ -171,7 +171,7 @@ public class SinglyLinkedList
 
     public static void main(String[] args) 
     {
-       testInserAtStart();
+        testInserAtStart();//calling method throuhg main
         //testInsertAtEnd();
         testInsertAfterKey();
     }
