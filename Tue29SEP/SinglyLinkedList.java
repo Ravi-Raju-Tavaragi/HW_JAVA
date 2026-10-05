@@ -166,6 +166,21 @@ public class SinglyLinkedList
     }
 
    }
+
+
+   public static Node deleteAtStart(Node head)
+   {
+    //empty
+    if(head == null)
+        {
+            return null;
+        }
+    else
+        {
+            return head.next;
+        }
+
+   }
      
 
 
