@@ -281,15 +281,17 @@ public class SinglyLinkedList
         printList(head);
 
         System.out.println("\n Delete KeyNode");
-        deleteKeyNode(head, 1);
+        deleteKeyNode(head, 100);
         printList(head);
 
-         System.out.println("\n Insertt at start");
+        System.out.println("\n Insertt at start");
         head = insertAtStart(200, head);
         head = insertAtStart(300, head);
+        head = insertAtStart(400, head);
+        head = insertAtStart(500, head);
         printList(head);
         System.out.println("\n Delete KeyNode");
-        deleteKeyNode(head, 3);
+        deleteKeyNode(head, 200);
         printList(head);
     }
 
