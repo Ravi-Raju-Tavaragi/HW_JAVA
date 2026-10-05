@@ -76,6 +76,19 @@ public class SinglyLinkedList
         printList(head);
     }
 
+    public static void testDeleteAtStart()
+    {
+        Node head = null;
+        deleteAtStart(head);
+
+        System.out.println("\n Delete at start");
+        head = insertAtStart(100, head);
+        printList(head);
+        System.out.println();
+        deleteAtStart(head);
+        printList(head);
+    }
+
 
 
 
@@ -176,30 +189,19 @@ public class SinglyLinkedList
             return null;
         }
     else
-        {
-            return head.next;
-        }
-
+        return head.next;
    }
 
-   /*public static void testDeleteAtStart()
-    {
-        printList(null);
-
-        System.out.println("\n Delete at start");
-        Node head = null;
-        head = deleteAtStart();
-        printList(head);
-    }*/
+   
      
 
 
     public static void main(String[] args) 
     {
-        testInserAtStart();//calling method throuhg main
-        testInsertAtEnd();
-        testInsertAfterKey();
-       // testDeleteAtStart();
+        //testInserAtStart();//calling method throuhg main
+        //testInsertAtEnd();
+        //testInsertAfterKey();
+        testDeleteAtStart();
 
         
     }
