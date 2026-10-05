@@ -200,9 +200,10 @@ public class SinglyLinkedList
     {
         if(head == null || head.next == null)
         {
-            return  null;
+            return null;
         }
 
+        
         Node lastButOne = head;
 
         while (lastButOne.next.next != null) 
@@ -228,23 +229,47 @@ public class SinglyLinkedList
         deleteAtEnd(head);
         printList(head);
 
-        /*System.out.println("\n Insertt at start");
-        head = insertAtStart(100, head);
-        head = insertAtStart(200, head);
-        printList(head);
-        System.out.println("\n Delete at End");
-        deleteAtEnd(head);
-        printList(head);
-
         System.out.println("\n Insertt at start");
         head = insertAtStart(100, head);
         head = insertAtStart(200, head);
-        head = insertAtStart(300, head);
-        head = insertAtStart(400, head);
         printList(head);
         System.out.println("\n Delete at End");
         deleteAtEnd(head);
-        printList(head);*/
+        printList(head);
+    }
+
+    public static Node deleteKeyNode(Node head, int key)
+    {
+        if(head == null)
+        {
+            return null;
+        }
+
+        if(head.data == key)
+        {
+            return head.next;
+        }
+        else if(head.next == null)
+            return head;
+
+        Node prevNode = head;
+        Node keyNode = head.next;
+
+        while(keyNode != null)
+        {
+            if(keyNode.data == key)
+                break;
+
+            prevNode = keyNode;
+            keyNode = keyNode.next;
+        }
+
+        if(keyNode != null && keyNode.data == key)
+        {
+            prevNode.next = keyNode.next;
+        }
+
+        return head;
     }
 
    
