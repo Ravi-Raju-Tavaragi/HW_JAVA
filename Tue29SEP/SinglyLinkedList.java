@@ -272,8 +272,26 @@ public class SinglyLinkedList
         return head;
     }
 
-   
-     
+    public static void testDeleteKeyNode()
+    {
+        Node head = null;
+
+        System.out.println("\n Insertt at start");
+        head = insertAtStart(100, head);
+        printList(head);
+
+        System.out.println("\n Delete KeyNode");
+        deleteKeyNode(head, 1);
+        printList(head);
+
+         System.out.println("\n Insertt at start");
+        head = insertAtStart(200, head);
+        head = insertAtStart(300, head);
+        printList(head);
+        System.out.println("\n Delete KeyNode");
+        deleteKeyNode(head, 1);
+        printList(head);
+    }
 
 
     public static void main(String[] args) 
@@ -282,7 +300,8 @@ public class SinglyLinkedList
         //testInsertAtEnd();
         //testInsertAfterKey();
         //testDeleteAtStart();
-        testDeleteAtEnd();
+        //testDeleteAtEnd();
+        testDeleteKeyNode();
 
         
     }
