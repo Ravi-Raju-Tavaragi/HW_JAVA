@@ -181,14 +181,27 @@ public class SinglyLinkedList
         }
 
    }
+
+   /*public static void testDeleteAtStart()
+    {
+        printList(null);
+
+        System.out.println("\n Delete at start");
+        Node head = null;
+        head = deleteAtStart();
+        printList(head);
+    }*/
      
 
 
     public static void main(String[] args) 
     {
         testInserAtStart();//calling method throuhg main
-        //testInsertAtEnd();
+        testInsertAtEnd();
         testInsertAfterKey();
+       // testDeleteAtStart();
+
+        
     }
     
 }
