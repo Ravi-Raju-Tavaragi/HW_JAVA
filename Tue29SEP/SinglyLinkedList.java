@@ -289,7 +289,7 @@ public class SinglyLinkedList
         head = insertAtStart(300, head);
         printList(head);
         System.out.println("\n Delete KeyNode");
-        deleteKeyNode(head, 1);
+        deleteKeyNode(head, 3);
         printList(head);
     }
 
