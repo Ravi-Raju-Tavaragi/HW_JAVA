@@ -2,14 +2,15 @@ package Tue29SEP;
 
 public class SinglyLinkedList
 {
-    static void printList(Node node)
+    static void printList(Node head)
     {
+        Node temp = head;
         System.out.print("head-->");
 
-        while(node != null)
+        while(temp != null)
         {
-            System.out.print(node.data + "-->");
-            node = node.next;
+            System.out.print(temp.data + "-->");
+            temp = temp.next;
         }
 
         System.out.print("null");
@@ -76,18 +77,7 @@ public class SinglyLinkedList
         printList(head);
     }
 
-    public static void testDeleteAtStart()
-    {
-        Node head = null;
-        deleteAtStart(head);
-
-        System.out.println("\n Delete at start");
-        head = insertAtStart(100, head);
-        printList(head);
-        System.out.println();
-        deleteAtStart(head);
-        printList(head);
-    }
+   
 
 
 
@@ -192,6 +182,71 @@ public class SinglyLinkedList
         return head.next;
    }
 
+    public static void testDeleteAtStart()
+    {
+        Node head = null;
+        deleteAtStart(head);
+
+        System.out.println("\n Insertt at start");
+        head = insertAtStart(100, head);
+        printList(head);
+        System.out.println("\n Delete at start");
+        deleteAtStart(head);
+        printList(head);
+    }
+
+
+    public static Node deleteAtEnd(Node head)
+    {
+        if(head == null || head.next == null)
+        {
+            return  null;
+        }
+
+        Node lastButOne = head;
+
+        while (lastButOne.next.next != null) 
+        {
+            lastButOne = lastButOne.next;
+        }
+
+        lastButOne.next = null;
+
+        return head;
+    }
+
+
+    public static void testDeleteAtEnd()
+    {
+        Node head = null;
+
+        System.out.println("\n Insertt at start");
+        head = insertAtStart(100, head);
+        printList(head);
+
+        System.out.println("\n Delete at End");
+        deleteAtEnd(head);
+        printList(head);
+
+        /*System.out.println("\n Insertt at start");
+        head = insertAtStart(100, head);
+        head = insertAtStart(200, head);
+        printList(head);
+        System.out.println("\n Delete at End");
+        deleteAtEnd(head);
+        printList(head);
+
+        System.out.println("\n Insertt at start");
+        head = insertAtStart(100, head);
+        head = insertAtStart(200, head);
+        head = insertAtStart(300, head);
+        head = insertAtStart(400, head);
+        printList(head);
+        System.out.println("\n Delete at End");
+        deleteAtEnd(head);
+        printList(head);*/
+    }
+
    
      
 
@@ -201,7 +256,8 @@ public class SinglyLinkedList
         //testInserAtStart();//calling method throuhg main
         //testInsertAtEnd();
         //testInsertAfterKey();
-        testDeleteAtStart();
+        //testDeleteAtStart();
+        testDeleteAtEnd();
 
         
     }
