@@ -229,15 +229,19 @@ public class SinglyLinkedList
 
         System.out.println("\n Delete at End");
         deleteAtEnd(head);
+        head = deleteAtEnd(head);
         printList(head);
 
         System.out.println("\n Insertt at start");
         head = insertAtStart(100, head);
         head = insertAtStart(200, head);
+        head = deleteAtEnd(head);
         printList(head);
+
         System.out.println("\n Delete at End");
-        deleteAtEnd(head);
+        head = deleteAtEnd(head);
         printList(head);
+
     }
 
     public static Node deleteKeyNode(Node head, int key)
@@ -304,7 +308,7 @@ public class SinglyLinkedList
         //testInsertAtEnd();
         //testInsertAfterKey();
         testDeleteAtStart();
-        //testDeleteAtEnd();
+        testDeleteAtEnd();
         //testDeleteKeyNode();
 
         
