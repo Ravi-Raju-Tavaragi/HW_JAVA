@@ -5,7 +5,7 @@ public class SinglyLinkedList
     static void printList(Node head)
     {
         Node temp = head;
-        System.out.print("head-->");
+        System.out.print("\nhead-->");
 
         while(temp != null)
         {
@@ -13,7 +13,7 @@ public class SinglyLinkedList
             temp = temp.next;
         }
 
-        System.out.print("null");
+        System.out.print("null\n");
     }
 
 
@@ -190,8 +190,10 @@ public class SinglyLinkedList
         System.out.println("\n Insertt at start");
         head = insertAtStart(100, head);
         printList(head);
-        System.out.println("\n Delete at start");
         deleteAtStart(head);
+        printList(head);
+        
+        head = deleteAtStart(head);
         printList(head);
     }
 
@@ -301,9 +303,9 @@ public class SinglyLinkedList
         //testInserAtStart();//calling method throuhg main
         //testInsertAtEnd();
         //testInsertAfterKey();
-        //testDeleteAtStart();
+        testDeleteAtStart();
         //testDeleteAtEnd();
-        testDeleteKeyNode();
+        //testDeleteKeyNode();
 
         
     }
