@@ -55,6 +55,26 @@ public class ArrayProblems
 
 
 
+    static void swapElements(int[] nums)
+    {
+        if ( nums == null || nums.length == 0 || nums.length == 1 )
+            return;
+
+        int leftIndex = 0;
+        int rightIndex = nums.length-1;
+
+        while (leftIndex <= rightIndex) 
+        {
+            int temp = nums[leftIndex];
+            nums[leftIndex] = nums[rightIndex];
+            nums[rightIndex] = temp;
+            leftIndex++;
+            rightIndex--;
+        }
+
+    }
+
+
 
 
 
@@ -72,9 +92,7 @@ public class ArrayProblems
         double result3 = findAverage(nums);
         System.err.println(result3);
 
-        
-
-        
+        swapElements(nums);
         
     }
 
