@@ -41,7 +41,7 @@ public class Task
 
     public static void main(String[] args) 
     {
-        int [] array = {100, 50, 50, 50, 10, 20, 30, 40, 50};
+        int [] array = {100, 50, 50, 50, 10, 20, 30, -40, 50};
         //int [] array = {0};
         //int [] array = {10};
         int num = 30;
