@@ -122,8 +122,8 @@ public class ArrayProblems
         }
 
         int[] result4 = countEvenOddNumbers(nums);
-        System.out.print(result4[0]);
-        System.out.print(result4[1]);
+        System.out.println(result4[0]);
+        System.out.println(result4[1]);
 
 
         
