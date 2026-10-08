@@ -78,7 +78,7 @@ public class ArrayProblems
     static int[] countEvenOddNumbers(int[] nums)
     {
         if ( nums == null || nums.length == 0)
-            return new int[] {0,0};
+            return new int[] {-1};
 
         int evenCount = 0;
         int oddCount = 0;
@@ -94,7 +94,7 @@ public class ArrayProblems
                 oddCount++;
             }
         }
-        return new int[] {evenCount, oddCount};
+        return new int[]{evenCount, oddCount};
     }
 
 
@@ -139,8 +139,8 @@ public class ArrayProblems
         }
 
         int[] result4 = countEvenOddNumbers(nums);
-        System.out.println(result4[0]);
-        System.out.println(result4[1]);
+        System.out.println("["+result4[0] + result4[1]+"]"); 
+        
 
         double result5 = studentAverage(nums);
         System.out.println(result5);
