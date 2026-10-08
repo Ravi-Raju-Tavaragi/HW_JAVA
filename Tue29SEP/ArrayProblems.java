@@ -139,7 +139,7 @@ public class ArrayProblems
         }
 
         int[] result4 = countEvenOddNumbers(nums);
-        System.out.println("["+result4[0] + result4[1]+"]"); 
+        System.out.println("\n["+result4[0] + result4[1]+"]"); 
         
 
         double result5 = studentAverage(nums);
