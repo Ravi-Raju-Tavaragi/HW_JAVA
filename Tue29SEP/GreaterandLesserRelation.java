@@ -18,7 +18,15 @@ public class GreaterandLesserRelation
                     j++;
                 }   
         }
-        return count;
+
+        int[] result = new int[j];
+
+        for (int i = 0; i < j; i++)
+        {
+            result[i] = count[i];
+        }
+
+        return result;
     }
 
 
