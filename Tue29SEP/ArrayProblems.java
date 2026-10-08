@@ -74,6 +74,29 @@ public class ArrayProblems
 
     }
 
+    // Even and Odd Count in array
+    static int[] countEvenOddNumbers(int[] nums)
+    {
+        if ( nums == null || nums.length == 0)
+            return new int[] {0,0};
+
+        int evenCount = 0;
+        int oddCount = 0;
+
+        for(int i = 0; i < nums.length; i++)
+        {
+            if ( nums[i] % 2 == 0)
+            {
+                evenCount++;
+            }
+            else
+            {
+                oddCount++;
+            }
+        }
+        return new int[] {evenCount, oddCount};
+    }
+
 
 
 
@@ -97,6 +120,8 @@ public class ArrayProblems
         {
             System.out.print(nums[i] + " ");
         }
+
+        countEvenOddNumbers(nums);
     }
 
     
