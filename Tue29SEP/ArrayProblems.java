@@ -36,7 +36,7 @@ public class ArrayProblems
     }
 
 
-    //Average value of set of integers in array
+    // Calaculata Average of set of integer numbers in an array
     static double findAverage(int[] nums)
     {
         if ( nums == null || nums.length == 0 )
