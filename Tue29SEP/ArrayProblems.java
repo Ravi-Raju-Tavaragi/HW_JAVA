@@ -99,6 +99,23 @@ public class ArrayProblems
 
 
 
+    static double studentAverage(int[] nums)
+    {
+        if ( nums == null || nums.length == 0 )
+            return -1;
+
+        int sum = 0;
+        double average = 0;
+
+        for(int i = 0; i < nums.length; i++)
+        {
+            sum = sum + nums[i];
+        }
+        average = sum / nums.length;
+        return average;
+    }
+
+
 
 
     public static void main(String[] args) 
@@ -113,7 +130,7 @@ public class ArrayProblems
         System.out.println(result2);
 
         double result3 = findAverage(nums);
-        System.err.println(result3);
+        System.out.println(result3);
 
         swapElements(nums);
         for (int i = 0; i < nums.length; i++)
@@ -124,6 +141,10 @@ public class ArrayProblems
         int[] result4 = countEvenOddNumbers(nums);
         System.out.println(result4[0]);
         System.out.println(result4[1]);
+
+        double result5 = studentAverage(nums);
+        System.out.println(result5);
+
 
 
         
