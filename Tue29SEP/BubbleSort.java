@@ -50,15 +50,31 @@ public class BubbleSort
         bubbleSort(array1);
         System.out.println("After Bubble sort");
         printArray(array1);
-
-        int[] array2 = {-5, -4, -3, -2, -1};
+        
+        int[] array2 = {5, -4, -3, -2, 1};
         System.out.println("Before Sorting");
         printArray(array2);
         bubbleSort(array2);
         System.out.println("After Bubble sort");
         printArray(array2);
 
+        int[] array3 = {5, -4, 3, 2, -1};
+        System.out.println("Before Sorting");
+        printArray(array3);
+        bubbleSort(array3);
+        System.out.println("After Bubble sort");
+        printArray(array3);
+
+        int[] array4 = {5};
+        System.out.println("Before Sorting");
+        printArray(array4);
+        bubbleSort(array4);
+        System.out.println("After Bubble sort");
+        printArray(array4);
+
         
+
+
     }
     
 }
