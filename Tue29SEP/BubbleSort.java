@@ -4,7 +4,7 @@ public class BubbleSort
 {
     static void bubbleSort(int[] array)
     {
-        if(array == null && array.length == 0)
+        if(array == null || array.length == 0)
             System.out.println("array null or empty");
 
         for(int i = 0; i < array.length - 1; i++)
@@ -38,8 +38,10 @@ public class BubbleSort
     public static void main(String[] args) 
     {
         int[] array = {5, 4, 3, 2, 1};
+        System.out.println("Before Sorting");
         printArray(array);
         bubbleSort(array);
+        System.out.println("After Bubble sort");
         printArray(array);
     }
     
