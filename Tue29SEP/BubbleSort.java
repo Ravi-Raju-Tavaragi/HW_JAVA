@@ -72,6 +72,13 @@ public class BubbleSort
         System.out.println("After Bubble sort");
         printArray(array4);
 
+        int[] array5 = {-11, 5, 0, 5, 0};
+        System.out.println("Before Sorting");
+        printArray(array5);
+        bubbleSort(array5);
+        System.out.println("After Bubble sort");
+        printArray(array5);
+
         
 
 
