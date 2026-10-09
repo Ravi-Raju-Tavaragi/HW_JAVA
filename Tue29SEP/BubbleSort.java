@@ -43,6 +43,22 @@ public class BubbleSort
         bubbleSort(array);
         System.out.println("After Bubble sort");
         printArray(array);
+
+        int[] array1 = {};
+        System.out.println("Before Sorting");
+        printArray(array1);
+        bubbleSort(array1);
+        System.out.println("After Bubble sort");
+        printArray(array1);
+
+        int[] array2 = {-5, -4, -3, -2, -1};
+        System.out.println("Before Sorting");
+        printArray(array2);
+        bubbleSort(array2);
+        System.out.println("After Bubble sort");
+        printArray(array2);
+
+        
     }
     
 }
