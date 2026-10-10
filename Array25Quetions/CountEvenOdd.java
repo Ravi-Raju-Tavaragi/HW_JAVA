@@ -1,5 +1,7 @@
 package Array25Quetions;
 
+import java.util.Arrays;
+
 public class CountEvenOdd
 {
     static int[] countEvenOddNumbers(int[] nums)
@@ -21,7 +23,7 @@ public class CountEvenOdd
                 oddCount++;
             }
         }
-        return new int[]{evenCount, oddCount};
+        return new int[]{oddCount, evenCount};
     }
 
 
@@ -29,7 +31,11 @@ public class CountEvenOdd
 
     public static void main(String[] args) 
     {
-        
+        int nums[] = {3, 8, 5, 12, 7};
+
+
+        int result[] = countEvenOddNumbers(nums);
+        System.out.println(Arrays.toString(result));
     }
     
 }
