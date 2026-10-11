@@ -2,7 +2,7 @@ package Array25Quetions;
 
 public class DiffLargestSmallest
 {
-    public static  int diferenceOfLargestAndSmallest(int array[])
+    public static int diferenceOfLargestAndSmallest(int array[])
     {
         if ( array == null || array.length == 0)
             return -1;
