@@ -8,7 +8,7 @@ public class DiffLargestSmallest
             return -1;
 
         int largest = 0;
-        int smalest = 0;
+        int smalest = array[0];
 
         for(int i = 0; i < array.length; i++)
         {
