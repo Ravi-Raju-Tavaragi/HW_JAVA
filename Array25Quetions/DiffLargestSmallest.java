@@ -20,7 +20,10 @@ public class DiffLargestSmallest
         }
 
         int result;
-        result = largest - smalest;
+        if(smalest < 0)
+            result = largest - (-(smalest));
+        else
+            result = largest - smalest;
         return result;
 
     }
@@ -29,7 +32,7 @@ public class DiffLargestSmallest
 
     public static void main(String[] args)
     {
-        int array[] = {14, 3, 27, 9, 0};
+        int array[] = {14, 3, 27, 9, 0, -1};
         int result = diferenceOfLargestAndSmallest(array);
         System.out.println(result);
 
