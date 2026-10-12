@@ -10,7 +10,7 @@ public class StudentMarks
         int count = 0;
         for(int i = 0; i < array.length; i++)
         {
-            if(array[i] >= key)
+            if(array[i] >= key && array[i] < 100 && array[i] > 0)
                 count++;
         }
         return count;
