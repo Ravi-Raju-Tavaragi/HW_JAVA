@@ -33,6 +33,29 @@ public class ExpandStringInPlace
 
 
 
+    void expandString(char[] str)
+    {
+        int writeIndex = calculateWriteIndex(str);
+        int readIndex = str.length-1;
+
+        while (writeIndex >= 0) 
+        {
+            if (str[readIndex] >= '2' && str[readIndex] <= '9') 
+            {
+                int count = str[readIndex] - '0';
+                writeIndex = copyCharFromRightToLeft(str[readIndex] - 1, 0, count, writeIndex);
+            }
+
+            else
+            {
+                str[writeIndex] = str[readIndex];
+                writeIndex--;
+            }
+            readIndex--;
+        }
+    }
+
+
     public static void main(String[] args) 
     {
         char[] str = {'a', '3', 'b', '2', 'c'};
