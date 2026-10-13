@@ -29,11 +29,12 @@ public class ExpandStringInPlace
             writeIndex--;
             count--;
         }
+        return writeIndex;
     }
 
 
 
-    void expandString(char[] str)
+    public void expandString(char[] str)
     {
         int writeIndex = calculateWriteIndex(str);
         int readIndex = str.length-1;
@@ -43,7 +44,8 @@ public class ExpandStringInPlace
             if (str[readIndex] >= '2' && str[readIndex] <= '9') 
             {
                 int count = str[readIndex] - '0';
-                writeIndex = copyCharFromRightToLeft(str[readIndex] - 1, 0, count, writeIndex);
+                char ch = str[readIndex - 1];
+                writeIndex = copyCharFromRightToLeft(str, ch, count, writeIndex);
             }
 
             else
@@ -60,6 +62,14 @@ public class ExpandStringInPlace
     {
         char[] str = {'a', '3', 'b', '2', 'c'};
         
+        ExpandStringInPlace obj = new ExpandStringInPlace();
+
+        obj.expandString(str);
+
+        for (int i = 0; i < str.length; i++)
+        {
+            System.out.print(str[i]);
+        }
     }
     
 }
