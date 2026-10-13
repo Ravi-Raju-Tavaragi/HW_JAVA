@@ -21,7 +21,15 @@ public class ExpandStringInPlace
     }
 
 
-    
+    public int copyCharFromRightToLeft(char[] str, char ch, int count, int writeIndex)
+    {
+        while (count > 0) 
+        {
+            str[writeIndex] = ch;
+            writeIndex--;
+            count--;
+        }
+    }
 
 
 
