@@ -8,11 +8,12 @@ public class ArrayPalindrome
             return 0;
 
         int count = 0;
-        int reverse = 0;
+        
         for(int i = 0; i < array.length; i++)
         {
-             int temp = array[i];
-
+            int temp = array[i];
+            int reverse = 0;
+            
             while (array[i] > 0) 
             {
 
