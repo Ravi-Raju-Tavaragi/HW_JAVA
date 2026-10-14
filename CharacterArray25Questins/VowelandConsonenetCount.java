@@ -24,17 +24,11 @@ public class VowelandConsonenetCount
         return new int[] {vowelCount, consonentCount};
     }
 
-
-
-
-
     public static void main(String[] args) 
     {
         char[] str = {'a', 'p', 'p', 'l', 'e'};
 
         int[] result =countVowelConsonent(str);
-        System.out.println("["+result[0]+","+result[1]+"]");
-        
+        System.out.println("["+result[0]+","+result[1]+"]");   
     }
-    
 }
