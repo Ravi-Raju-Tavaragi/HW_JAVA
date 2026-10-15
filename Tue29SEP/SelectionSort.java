@@ -35,10 +35,6 @@ public class SelectionSort
         System.out.println();
     }
 
-
-
-
-
     public static void main(String[] args) 
     {
         int[] array = {9, 2, 16, 6, 13};
