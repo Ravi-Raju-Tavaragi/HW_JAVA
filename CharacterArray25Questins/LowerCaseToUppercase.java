@@ -6,7 +6,7 @@ public class LowerCaseToUppercase
     {
         
         if(str == null || str.length == 0)
-            return new char[] {0, 0};
+            return new char[] {0};
 
         for(int i = 0; i < str.length; i++)
         {
@@ -20,12 +20,13 @@ public class LowerCaseToUppercase
 
     public static void main(String[] args) 
     {
-        char[] str = {'c', 'o', 'd', 'e'};
+        char[] str = {'1', 'O', 'd', 'e'};
         for(int i = 0; i < str.length; i++)
         {
             System.out.print(str[i] +", ");
         }
 
+        System.out.println();
         char[] result = convertToUppercase(str);
         for(int i = 0; i < result.length; i++)
         {
