@@ -75,7 +75,7 @@ public class PasswordValidity
         }
         else
         {
-            System.out.println("Invalid Password");
+            System.out.println("Invalid Password, Please Use Above Shown Requirement");
         }
 
 
@@ -101,6 +101,10 @@ public class PasswordValidity
         System.out.println();
         char[] str4 = {'a', 'v', 'i', '@', '2', '#', 'B'};
         validatePassword(str4);
+
+        System.out.println();
+        char[] str5 = {'a', 'a', 'a', 'a', 'a', 'a', 'a'};
+        validatePassword(str5);
         
     }
     
