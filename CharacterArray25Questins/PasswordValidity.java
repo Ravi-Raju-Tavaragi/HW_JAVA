@@ -2,7 +2,7 @@ package CharacterArray25Questins;
 
 public class PasswordValidity
 {
-    public void validatePassword(char[] str)
+    public static void validatePassword(char[] str)
     {
         if(str == null || str.length == 0)
             System.out.println("You Entered Nothing");
@@ -81,13 +81,11 @@ public class PasswordValidity
 
     }
 
-
-
-
-
     public static void main(String[] args) 
     {
+        char[] str = {'R', 'a', 'v', 'i', '*', '2', '0', 'a', 'b'};
 
+        validatePassword(str);
         
     }
     
