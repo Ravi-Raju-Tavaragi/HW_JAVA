@@ -30,7 +30,7 @@ public class PasswordValidity
         }
         else
         {
-            System.out.println("You Missed to Enter atleast One Uppercase letter in Your Password");
+            System.out.println("You Missed to Enter atleast One Uppercase letter in Your Password, use one uppercase");
         }
 
         if(isLowercaseFound)
@@ -39,7 +39,7 @@ public class PasswordValidity
         }
         else
         {
-            System.out.println("You Missed to Enter atleast One Lowercase letter in Your Password");
+            System.out.println("You Missed to Enter atleast One Lowercase letter in Your Password, use one lowercase");
         }
 
         if(isDigitFound)
@@ -48,7 +48,7 @@ public class PasswordValidity
         }
         else
         {
-            System.out.println("You Missed to Enter atleast One Digit in Your Password");
+            System.out.println("You Missed to Enter atleast One Digit in Your Password, use one digit");
         }
 
         if(isSpecialCharacterFound)
@@ -57,7 +57,7 @@ public class PasswordValidity
         }
         else
         {
-            System.out.println("You Missed to Enter atleast One specialCharacter in Your Password");
+            System.out.println("You Missed to Enter atleast One specialCharacter in Your Password, use one specialcharacer");
         }
         
         if(str.length >= 8)
