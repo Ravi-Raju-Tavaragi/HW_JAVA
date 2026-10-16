@@ -22,7 +22,6 @@ public class PasswordValidity
                 isDigitFound = true;
             else if(str[i] >= '!' && str[i] <= '/')
                 isSpecialCharacterFound = true;
-                
         }
         if(isUppercaseFound)
         {
@@ -83,7 +82,7 @@ public class PasswordValidity
 
     public static void main(String[] args) 
     {
-        char[] str = {'R', 'a', 'v', 'i', '2', '0', 'a', 'b'};
+        char[] str = {'R', 'a', 'v', 'i', '*', '2', '0', 'a', 'b'};
 
         validatePassword(str);
         
