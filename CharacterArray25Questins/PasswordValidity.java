@@ -83,8 +83,19 @@ public class PasswordValidity
     public static void main(String[] args) 
     {
         char[] str = {'R', 'a', 'v', 'i', '*', '2', '0', 'a', 'b'};
-
         validatePassword(str);
+
+        System.out.println();
+        char[] str1 = {'a', 'v', 'i', '*', '2', 'a', 'b'};
+        validatePassword(str1);
+
+        System.out.println();
+        char[] str2 = {'0', '0', '0', '0', '0', '0', '0', '0'};
+        validatePassword(str2);
+
+        System.out.println();
+        char[] str3 = {};
+        validatePassword(str3);
         
     }
     
