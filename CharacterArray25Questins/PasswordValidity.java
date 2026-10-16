@@ -20,7 +20,7 @@ public class PasswordValidity
                 isLowercaseFound = true;
             else if(str[i] >= '0' && str[i] <='9')
                 isDigitFound = true;
-            else if(str[i] >= '!' && str[i] <= '/')
+            else if(str[i] >= '!' && str[i] <= '/' || str[i] >= ':' && str[i] <= '@' || str[i] >= '{' && str[i] <= '~')
                 isSpecialCharacterFound = true;
                 continue;
         }
@@ -91,12 +91,16 @@ public class PasswordValidity
         validatePassword(str1);
 
         System.out.println();
-        char[] str2 = {'0', '0', '0', '0', '0', '0', '0', '0'};
+        char[] str2 = {'=', '0', '0', '0', '0', '0', '0', '0'};
         validatePassword(str2);
 
         System.out.println();
         char[] str3 = {};
         validatePassword(str3);
+
+        System.out.println();
+        char[] str4 = {'a', 'v', 'i', '@', '2', '#', 'B'};
+        validatePassword(str4);
         
     }
     
