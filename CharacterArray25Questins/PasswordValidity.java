@@ -22,6 +22,7 @@ public class PasswordValidity
                 isDigitFound = true;
             else if(str[i] >= '!' && str[i] <= '/')
                 isSpecialCharacterFound = true;
+                continue;
         }
         if(isUppercaseFound)
         {
