@@ -43,13 +43,6 @@ public class BinarySearch
         return -1; // If element is not found;
     }
 
-
-
-    
-
-
-
-
     public static void main(String[] args) 
     {
         int arr[] = {10, 20, 30, 40, 50};
