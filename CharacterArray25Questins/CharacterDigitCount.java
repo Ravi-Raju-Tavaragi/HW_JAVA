@@ -20,9 +20,6 @@ public class CharacterDigitCount
             return false;
     }
 
-
-
-
     public static void main(String[] args) 
     {
         char[] str = {'p', 'a', 's', 's'};
