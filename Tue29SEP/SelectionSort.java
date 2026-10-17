@@ -25,6 +25,7 @@ public class SelectionSort
         }
     }
 
+    
 
     public static void printArray(int[] array)
     {
