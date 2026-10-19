@@ -27,7 +27,7 @@ public class ThreePlayers
             return 2;
         else
             return 3;
-}
+    }
 
 
 
