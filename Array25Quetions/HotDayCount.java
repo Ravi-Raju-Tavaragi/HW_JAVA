@@ -19,10 +19,6 @@ public class HotDayCount
         return HotDayCount;
     }
 
-
-
-
-
     public static void main(String[] args) 
     {
         int[] array = {30, 32, 31, 35, 36, 34, 37};
