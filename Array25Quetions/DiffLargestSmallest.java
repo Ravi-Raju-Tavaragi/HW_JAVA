@@ -19,11 +19,7 @@ public class DiffLargestSmallest
                 smalest = array[i];
         }
 
-        int result;
-        if(smalest < 0)
-            result = largest - (-(smalest));
-        else
-            result = largest - smalest;
+        int result = largest - smalest;
         return result;
 
     }
