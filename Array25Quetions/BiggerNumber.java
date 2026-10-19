@@ -4,21 +4,21 @@ public class BiggerNumber
 {
     static int[] biggerNumbers(int[] array1, int[] array2)
     {
-    if (array1 == null || array2 == null || array1.length != array2.length)
-        return new int[0];
+        if (array1 == null || array2 == null || array1.length != array2.length)
+            return new int[0];
 
-    int[] result = new int[array1.length];
+        int[] result = new int[array1.length];
 
-    for (int i = 0; i < array1.length; i++)
-    {
-        if (array1[i] > array2[i])
-            result[i] = array1[i];
-        else
-            result[i] = array2[i];
+        for (int i = 0; i < array1.length; i++)
+        {
+            if (array1[i] > array2[i])
+                result[i] = array1[i];
+            else
+                result[i] = array2[i];
+        }
+
+        return result;
     }
-
-    return result;
-}
 
 
     public static void main(String[] args) 

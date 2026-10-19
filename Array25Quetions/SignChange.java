@@ -4,7 +4,7 @@ public class SignChange
 {
     static int countSignChanges(int[] nums)
     {
-        if (nums == null || nums.length < 2)
+        if (nums == null || nums.length == 0)
             return 0;
 
         int count = 0;

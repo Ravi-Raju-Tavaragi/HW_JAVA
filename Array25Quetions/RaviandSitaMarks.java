@@ -3,23 +3,23 @@ package Array25Quetions;
 public class RaviandSitaMarks
 {
     static int countHigherMarks(int[] ravi, int[] sita)
-{
-    if (ravi == null || sita == null ||
-        ravi.length != sita.length)
-        return -1;
-
-    int count = 0;
-
-    for (int i = 0; i < ravi.length; i++)
     {
-        if (ravi[i] > sita[i])
-        {
-            count++;
-        }
-    }
+        if (ravi == null || sita == null ||
+            ravi.length != sita.length)
+            return -1;
 
-    return count;
-}
+        int count = 0;
+
+        for (int i = 0; i < ravi.length; i++)
+        {
+            if (ravi[i] > sita[i])
+            {
+                count++;
+            }
+        }
+
+        return count;
+    }
 
 
 
