@@ -14,6 +14,7 @@ public class HotDayCount
         {
             if(HoterDay < array[i])
                 HotDayCount++;
+                HoterDay = array[i];
         }
         return HotDayCount;
     }
