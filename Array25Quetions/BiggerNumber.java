@@ -3,7 +3,7 @@ package Array25Quetions;
 public class BiggerNumber
 {
     static int[] biggerNumbers(int[] array1, int[] array2)
-{
+    {
     if (array1 == null || array2 == null || array1.length != array2.length)
         return new int[0];
 
