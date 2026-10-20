@@ -7,14 +7,14 @@ public class CharacterDigitCount
         if(str == null || str.length == 0)
             return false;
 
-        int count = 0;
+        boolean digitFound = false;
         for(int i = 0; i < str.length; i++)
         {
             if(str[i] >= '0' && str[i] <= '9')
-                count++;
+                digitFound = true;
         }
 
-        if(count > 0)
+        if(digitFound)
             return true;
         else
             return false;

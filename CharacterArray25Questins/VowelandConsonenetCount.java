@@ -4,7 +4,6 @@ public class VowelandConsonenetCount
 {
     static int[] countVowelConsonent(char[] str)
     {
-        
         if(str == null || str.length == 0)
             return new int[] {0, 0};
 
